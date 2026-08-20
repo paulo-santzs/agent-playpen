@@ -14,3 +14,7 @@ O MVP é apenas uma simulação no navegador: nenhum comando, arquivo ou acesso 
 React + TypeScript + Vite. Licença MIT.
 
 O motor de decisão é isolado e testado: cada cenário consulta a mesma política explícita antes de registrar uma ação.
+
+## Modelo de decisão
+
+Cada cenário declara uma capacidade (`files`, `network` ou `shell`). A política funciona como uma lista de permissões explícita: se a capacidade estiver habilitada, a simulação registra `PERMITIDO`; caso contrário, registra `BLOQUEADO`. O Playpen não executa a ação, não acessa arquivos e não faz chamadas de rede.
